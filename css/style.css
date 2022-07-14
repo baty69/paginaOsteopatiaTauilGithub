@@ -23,6 +23,8 @@ h1 {
   color: #515a56;
   font-size: 4rem;
   text-align: center;
+  animation-name: textAlpha;
+  animation-duration: 8s;
 }
 
 h2, h3 {
@@ -306,9 +308,25 @@ aside {
   }
 
   .listaNav {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
 }
 
+.transform:hover{
+  transform: translatey(-12px);
+  cursor: pointer;
+  
+}
+.scale:hover{
+  transform: scalex(0.7);
+  cursor: pointer;
+  transition: transform 3s;
+
+}
+ 
+@keyframes textAlpha{
+  from{opacity: 0}
+  to{opacity: 1}
+  }
