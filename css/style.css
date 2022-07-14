@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+* {
+  font-family: Ubuntu, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%; 
+  /* 1rem = 10px */
+}
+
+body {
+  background-image: url(../css/img/ki4.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  color: #515a56;
+  font-size: 4rem;
+  text-align: center;
+}
+
+h2, h3 {
+  color: #695a5a;
+  font-size: 3rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+nav ul li a:hover {
+  color: grey;
+  font-weight: 800;
+}
+
+article p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+section {
+  width: 80%;
+  height: auto;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  margin: 15px auto;
+  margin-bottom: 40px;
+  border-top: solid #c0d3cb 7px;
+  border-left: solid grey 1px;
+}
+
+section h2 {
+  color: #695a5a;
+  font-size: 2rem;
+  text-align: center;
+}
+
+section p {
+  padding-top: 15px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+form {
+  background-color: #ede6e6;
+  width: 50%;
+  height: auto;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  margin: 15px auto;
+  border-top: solid #c0d3cb 7px;
+  border-right: solid grey 1px;
+  border-bottom: solid grey 1px;
+  border-left: solid grey 1px;
+}
+
+form div {
+  padding: 5px;
+  margin: auto;
+  font-size: 15px;
+}
+
+div img {
+  width: 100%;
+}
+aside {
+  width: 85%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.encabezado nav {
+  background: #c0d3cb;
+  top: 0;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.encabezado nav ul {
+  display: flex;
+}
+
+.encabezado nav ul li {
+  list-style: none;
+  margin-right: 10px;
+}
+
+.text-grey {
+  color: grey;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.background-light {
+  background-color: #ede6e6;
+}
+
+.mainOsteopatia{
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  
+}
+
+
+.detalle__articulo {
+  width: 70%;
+  height: auto;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  margin: 15px auto;
+  border-top: solid #c0d3cb 7px;
+  border-right: solid grey 1px;
+  border-bottom: solid grey 1px;
+  border-left: solid grey 1px;
+}
+
+.encabezado__img--fluid {
+  width: 40%;
+  display: block;
+  margin: auto;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 3%;
+}
+
+.mapa {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.row {
+  display: flex;
+  padding: 5px;
+  width: 100%;
+}
+.column {
+  flex: 25%;
+  padding: 5px;
+}
+.column img {
+  margin-top: 5px;
+}
+
+.imagenMain {
+  width: 40%;
+  float: right;
+  margin: auto;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 3%;
+}
+
+.pie {
+  background: #c0d3cb;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pie__titulo--md {
+  display: inline-block;
+  font-size: 2.5rem;
+}
+
+.pie__icon--sm {
+  width: 40px;
+}
+
+/*inicia grids*/
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "nav nav nav"
+    "section principal principal"
+    "section aside aside"
+    "footer footer footer";
+} 
+
+#mainNav {
+  grid-area: nav;
+}
+
+#principal {
+  grid-area: principal;
+}
+/*main 2 o ASIDE experiencia*/
+#section {
+  grid-area: section;
+}
+/*div para galeria de fotos*/
+#aside {
+  grid-area: aside;
+}
+#footer {
+  grid-area: footer;
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 960px) {
+  .contenedor {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "nav nav"
+      "section principal"
+      "aside aside"
+      "footer footer";
+  }
+
+#mainNav {
+}
+}
+
+#principal {
+}
+
+#section {
+  width: 70%;
+}
+
+@media only screen and(min-width: 961px) {
+}
+
+@media screen and (max-width: 400px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "nav"
+      "principal"
+      "section"
+      "aside"
+      "footer";
+  }
+
+  #mainNav {
+  }
+
+  #principal {
+    width: 100%;
+  }
+
+  #aside .row {
+    display: block;
+    width: 100%;
+  }
+}
+
+.navOsteopatia{
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .listaNav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+}
+
